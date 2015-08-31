@@ -55,5 +55,43 @@ git checkout bugFix
 git rebase master
 ```
 
+### Ramping Up
+
+#### Detach yo'HEAD
+
+```
+git checkout bugFix
+
+git checkout C4
+```
+
+#### Relative Refs #1 (^)
+
+```
+git checkout bugFix^
+```
+
+#### Relative Refs #2 (~)
+
+```
+git checkout HEAD^
+
+git branch -f master C6
+
+git branch -f bugFix C0
+```
+
+#### Reversing Changes in Git
+
+```
+git reset local~1
+
+git checkout pushed
+
+git revert pushed
+```
+
+
+
 
 
