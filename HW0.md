@@ -91,6 +91,21 @@ git checkout pushed
 git revert pushed
 ```
 
+![alt text](https://github.com/kumar-utsav/HW/blob/master/Images/HW.png "Completed Levels")
+
+### Hooks 
+
+### Content of post-commit file
+
+```
+#!/bin/bash
+
+open 'http://www.google.com'
+```
+
+![alt text](https://github.com/kumar-utsav/HW/blob/master/Images/HooksTest.gif "Hooks Test GIF")
+
+
 
 
 
