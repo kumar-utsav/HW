@@ -74,11 +74,12 @@ git checkout bugFix^
 #### Relative Refs #2 (~)
 
 ```
-git checkout HEAD^
 
 git branch -f master C6
 
-git branch -f bugFix C0
+git branch -f bugFix HEAD~2
+
+git checkout HEAD^
 ```
 
 #### Reversing Changes in Git
