@@ -60,7 +60,6 @@ git rebase master
 #### Detach yo'HEAD
 
 ```
-git checkout bugFix
 
 git checkout C4
 ```
