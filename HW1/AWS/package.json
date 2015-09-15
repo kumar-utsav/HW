@@ -1,0 +1,15 @@
+{
+  "name": "AWS",
+  "version": "0.0.0",
+  "description": "\"AWS\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.2.0",
+    "fs": "0.0.2"
+  }
+}

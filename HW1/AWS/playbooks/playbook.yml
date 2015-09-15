@@ -1,0 +1,15 @@
+---
+- hosts: ansible_ssh_host
+  user: ec2-user
+  sudo: yes
+  tasks:
+    - name: Installs nginx web server
+      yum: pkg=nginx state=installed update_cache=true
+      notify:
+        - start nginx
+    - name: Installs git
+      yum: pkg=git state=installed update_cache=true
+
+  handlers:
+    - name: start nginx
+      service: name=nginx state=started
