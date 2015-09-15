@@ -6,7 +6,7 @@ AWS.config.update({
 });
 
 var params = {
-  ImageId: process.argv[2], //ami-e965ba80 
+  ImageId: process.argv[2], //ami-d05e75b8 
   InstanceType: process.argv[3], //t2.micro
   MinCount: 1, 
   MaxCount: 1,
@@ -19,15 +19,17 @@ ec2.runInstances(params, function(err, data) {
   if (err) { console.log("Could not create instance", err); return; }
 
   var instanceId = data.Instances[0].InstanceId;
-  console.log("Created instance", instanceId);
-  console.log("DATA: " + JSON.stringify(data));
+  console.log("\nAWS Instance created with Instance ID: ", instanceId);
+
+  console.log("\nWaiting for IP assignment.......");
 
   setTimeout(function(){
     ec2.describeInstances({ InstanceIds: [ instanceId ] }, function(err, data) {
       if (err) console.log(err, err.stack); // an error occurred
       else{
-        var ip = "[ansible_ssh_host]\n" + JSON.stringify(data.Reservations[0].Instances[0].PublicIpAddress);
+        var ip = "[Instances]\n" + JSON.stringify(data.Reservations[0].Instances[0].PublicIpAddress);
         fs.writeFile("inventory", ip, function(err) {
+            console.log("\nInventory file created with the public IP address of the created AWS instance.")
             if(err) {
                 return console.log(err);
             }
