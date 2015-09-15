@@ -60,8 +60,6 @@ git rebase master
 #### Detach yo'HEAD
 
 ```
-git checkout bugFix
-
 git checkout C4
 ```
 
@@ -74,11 +72,12 @@ git checkout bugFix^
 #### Relative Refs #2 (~)
 
 ```
-git checkout HEAD^
 
 git branch -f master C6
 
-git branch -f bugFix C0
+git branch -f bugFix HEAD~2
+
+git checkout HEAD^
 ```
 
 #### Reversing Changes in Git
@@ -90,6 +89,21 @@ git checkout pushed
 
 git revert pushed
 ```
+
+![alt text](https://github.com/kumar-utsav/HW/blob/master/Images/HW.png "Completed Levels")
+
+### Hooks 
+
+### Content of post-commit file
+
+```
+#!/bin/bash
+
+open 'http://www.google.com'
+```
+
+![alt text](https://github.com/kumar-utsav/HW/blob/master/Images/HooksTest.gif "Hooks Test GIF")
+
 
 
 
