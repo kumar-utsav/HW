@@ -43,4 +43,4 @@ To complete this homework, I have used two service providers namely Digital Ocea
   
 Below is the GIF showing the whole process:
 
-![alt text](https://github.com/kumar-utsav/HW/blob/master/HW1/Digital%20Ocean/Digital%20Ocean.gif "Provisioning DO's Droplet")
+![alt text](https://github.com/kumar-utsav/HW/blob/master/HW1/HW1.gif "Complete Process")
