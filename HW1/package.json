@@ -1,7 +1,7 @@
 {
-  "name": "AWS",
+  "name": "HW1",
   "version": "0.0.0",
-  "description": "\"AWS\"",
+  "description": "\"HW1\"",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
