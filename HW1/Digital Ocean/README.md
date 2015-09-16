@@ -26,12 +26,16 @@
   ssh root@<ip_address>
   ```
 
-8. Create a playbook.yml file which will contain the tasks performed by the Ansible on the list of servers mentioned in that file.
+8. Now, install Ansible on your system using: ```brew install ansible``` (if on MAC).
 
-9. Now, run the following command to provision the droplet using ansible:
+9. Create a playbook.yml file which will contain the tasks performed by the Ansible on the list of servers mentioned in that file.
+
+10. Now, run the following command to provision the droplet using ansible:
   ```
   ansible-playbook -i inventory playbooks/playbook.yml -u root
   ```
+  
+  The above command will consume the inventory file and use the rules in playbook.yml to provision the droplet.
   
 Below is the GIF showing the whole process:
 
