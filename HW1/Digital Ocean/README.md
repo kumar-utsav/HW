@@ -1,6 +1,6 @@
 # Provisioning and Configuring Digital Ocean's Droplet
 
-## Steps to create a droplet on Digital Ocean.
+## Steps to create a droplet on Digital Ocean and provision it using Ansible.
 
 1. Generate your digital ocean token using Digital Ocean GUI and save it as your environment variable to be used    lated in the nodejs script. This can be done using the following command from the terminal: ``` export DIGITAL_OCEAN_TOKEN= <your digital ocean token> ```
 
