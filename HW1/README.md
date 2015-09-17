@@ -2,7 +2,7 @@
 
 To complete this homework, I have used two service providers namely Digital Ocean and Amazon Web Services.
 
-## Steps to setup Digital Ocean
+## Initial steps to setup Digital Ocean
 
 1. Create an account on Digital Ocean.
 
@@ -23,7 +23,7 @@ To complete this homework, I have used two service providers namely Digital Ocea
    export DIGITAL_OCEAN_SSH_ID=<your SSH ID>
    ```
 
-## Steps to setup AWS
+## Initial steps to setup AWS
 
 1. Create a free tier account on AWS.
 
@@ -70,7 +70,7 @@ To complete this homework, I have used two service providers namely Digital Ocea
 
 
  
-## Provisioning and Configuring The Two Servers Using Node Script
+## Provisioning and Configuring The Two Servers Using Node Script and Ansible
 
 1. Go to HW/HW1 directory. Run ``` npm install ``` to install all the dependencies needed for the execution of the node script. 
 
