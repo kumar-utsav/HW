@@ -55,8 +55,8 @@ To complete this homework, I have used two service providers namely Digital Ocea
 
 9. Go to Security Groups option in the EC2 console on AWS GUI. Create the following inbound security rules:
    ```
-   All TCP
-   SSH
+   All TCP      TCP     0 - 65535     0.0.0.0/0  
+   SSH          TCO     22            0.0.0.0/0   
    ```
 
 ## Setting up Ansible
