@@ -87,7 +87,9 @@ To complete this homework, I have used two service providers namely Digital Ocea
 
 3. You can do ``` cat inventory``` and ``` cat playbook.yml``` to check out the contents of the inventory and playbook files respectively.
 
-4. Now, to provision the servers using Ansible, run the following command:
+4. Wait for a minute or so, to run the Ansible command since the servers take some time to get active and ready to be provisioned.
+
+5. Now, to provision the servers using Ansible, run the following command:
    ```
    ansible-playbook -i inventory playbook.yml
    ```
