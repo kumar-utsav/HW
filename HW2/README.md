@@ -12,4 +12,4 @@
 
 ### Coverage Screenshot
 
-![alt text](https://github.com/kumar-utsav/HW/HW2/Coverage.png "Coverage")
+![alt text](https://github.com/kumar-utsav/HW/blob/master/HW2/Coverage.png "Coverage")
