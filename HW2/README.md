@@ -2,7 +2,7 @@
 
 ### Steps To Check The Coverage
 
-1. Clone the repo.
+1. Clone the repo. Go to HW2 directory.
 
 2. Do ```npm install``` to install the dependencies.
 
