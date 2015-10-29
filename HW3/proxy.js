@@ -1,8 +1,6 @@
 var redis = require("redis")
 var request = require("request")
 var express = require("express")
-var bodyParser = require('body-parser')
-var multer = require('multer')
 
 var upload = multer(); 
 var app = express()
@@ -19,13 +17,6 @@ var server = app.listen(3002, function() {
     console.log('Example app listening at http://%s:%s', host, port);
 
 });
-
-
-// parse application/json
-app.use(bodyParser.json())
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
 
 function resolvePort() {
 
@@ -76,9 +67,6 @@ app.get('/set', function(req, res) {
 app.post('/upload', function(req, res) {
     var port = resolvePort();
     console.log("Response from server localhost:" + port);
-
-    console.log(req)
-
     request('http://localhost:' + port + '/upload', function(error, response, body) {
         if (!error && response.statusCode == 200) {
             res.send(body)
