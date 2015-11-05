@@ -75,9 +75,7 @@ var server = app.listen(port, function() {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log(host)
-
-    console.log('Example app listening on localhost at port: ', host, port);
+    console.log('Server listening on localhost at port:', port);
 });
 
 app.get('/', function(req, res) {

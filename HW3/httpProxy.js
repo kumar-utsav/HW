@@ -6,6 +6,8 @@ var client = redis.createClient(6379, '127.0.0.1', {})
 
 var serverPorts = process.argv.splice(2);
 
+
+
 for(var i in serverPorts){
 	client.rpush('ports', serverPorts[i]);	
 }
@@ -18,10 +20,10 @@ var server = http.createServer(function(req, res) {
 		var address = 'http://localhost:' + port;
 		proxy.web(req, res, { target: address });
 		console.log("Redirecting request to port: " + port);
-		client.lpush('ports', port);
+		client.rpush('ports', port);
 	});
 });
 
-console.log("Listening on port: 3002");
+console.log("Proxy server listening on port: 3002");
 server.listen(3002)
 
