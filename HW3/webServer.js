@@ -45,7 +45,7 @@ app.get('/recent', function(req, res) {
 app.post('/upload', [multer({
     dest: './uploads/'
 }), function(req, res) {
-    console.log("check")
+    
     if (req.files.image) {
         fs.readFile(req.files.image.path, function(err, data) {
             if (err) throw err;
@@ -53,6 +53,7 @@ app.post('/upload', [multer({
             client.rpush('images', img);
         });
     }
+
     res.status(204).end()
 }]);
 
@@ -68,7 +69,9 @@ app.get('/meow', function(req, res) {
 
 // HTTP SERVER
 
-var server = app.listen(3001, function() {
+var port = process.argv[2];
+
+var server = app.listen(port, function() {
     var host = server.address().address;
     var port = server.address().port;
 

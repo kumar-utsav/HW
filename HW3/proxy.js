@@ -1,8 +1,8 @@
 var redis = require("redis")
 var request = require("request")
 var express = require("express")
+var multer = require('multer')
 
-var upload = multer(); 
 var app = express()
 var client = redis.createClient(6379, '127.0.0.1', {})
 
@@ -64,16 +64,22 @@ app.get('/set', function(req, res) {
     })
 });
 
-app.post('/upload', function(req, res) {
+app.post('/upload', [multer({
+    dest: './uploads/'
+}), function(req, res) {
+
     var port = resolvePort();
     console.log("Response from server localhost:" + port);
-    request('http://localhost:' + port + '/upload', function(error, response, body) {
+    
+    request({url: 'http://localhost:' + port + '/upload', files: req.files}, function(error, response, body) {
+        console.log("Res: " + JSON.stringify(response));
         if (!error && response.statusCode == 200) {
-            res.send(body)
+            res.end(body)
         }
     })
 
-});
+    res.status(204).end()
+}]);
 
 app.get('/meow', function(req, res) {
     var port = resolvePort();

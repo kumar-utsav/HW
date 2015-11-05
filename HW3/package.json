@@ -13,5 +13,8 @@
     "multer": "^0.1.8",
     "redis": "^0.12.1",
     "request": "^2.65.0"
+  },
+  "dependencies": {
+    "http-proxy": "^1.12.0"
   }
 }
