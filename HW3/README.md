@@ -87,7 +87,7 @@ Following is the screencast for the same:
 
 #### Demonstrate proxy
 
-In this task, I created a proxy server which will load balance the requests to two different servers. Run ``` node proxy.js <port1> <port2>``` to start the proxy server. This command will take two port numbers as user input on which the two servers are running. The requests will be served by hitting ``` localhost:3002``` but the response will come from the respective server to which the request was forwarded to by the proxy server.
+In this task, I created a proxy server which will load balance the requests to two different servers. Run ``` node httpProxy.js <port1> <port2>``` to start the proxy server. This command will take two port numbers as user input on which the two servers are running. The requests will be served by hitting ``` localhost:3002``` but the response will come from the respective server to which the request was forwarded to by the proxy server.
 
 Code snippet for this task:
 
