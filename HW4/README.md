@@ -22,8 +22,14 @@
 1. Create two different ubuntu based droplets (server and client) and install all the required tools (git, curl, docker, docker-compose, etc.).
 
 2. Copy the ```docker-compose.yml``` file of the server folder to the server droplet. Do ```docker-compose up```. This will create two containers one for redis and another for redis-ambassador. 
-3. 
 
+3. Now, copy the ```docker-compose.yml``` file of the client folder to the client droplet. Do ```docker-compose up```. This will create one container for redis-ambassador. This will connect to the redis server running on the server droplet.
+
+4. Now, run ```docker run -i -t --rm --link redis-ambassador:redis relateiq/redis-cli```. This will create a new container linked to the redis ambassador which will give you access to the redis-cli.
+ 
+5. In the redis-cli you can perform redis's set and get operations.
+
+![alt text](https://github.com/kumar-utsav/HW/blob/master/HW4/Task2%20(ambassador)/task2.gif "Task 1")
 
 3) **Docker Deploy**: Extend the deployment workshop to run a docker deployment process.
 
