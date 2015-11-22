@@ -17,12 +17,13 @@
 ![alt text](https://github.com/kumar-utsav/HW/blob/master/HW4/Task1%20(file-io)/task1.gif "Task 1")
 
 
-2) **Ambassador pattern**: Implement the remote ambassador pattern to encapsulate access to a redis container by a container on a different host.
+#### Ambassador Pattern
 
-* Use Docker Compose to configure containers.
-* Use two different VMs to isolate the docker hosts. VMs can be from vagrant, DO, etc.
-* The client should just be performing a simple "set/get" request.
-* In total, there should be 4 containers.
+1. Create two different ubuntu based droplets (server and client) and install all the required tools (git, curl, docker, docker-compose, etc.).
+
+2. Copy the ```docker-compose.yml``` file of the server folder to the server droplet. Do ```docker-compose up```. This will create two containers one for redis and another for redis-ambassador. 
+3. 
+
 
 3) **Docker Deploy**: Extend the deployment workshop to run a docker deployment process.
 
