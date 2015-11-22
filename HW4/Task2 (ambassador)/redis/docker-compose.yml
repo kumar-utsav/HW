@@ -1,0 +1,11 @@
+redis:
+    image: redis
+    container_name: redis-docker
+
+redis_ambassador:
+    image: svendowideit/ambassador
+    container_name: redis-ambassador
+    links:
+        - redis
+    ports:
+        - "6379:6379"

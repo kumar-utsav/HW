@@ -1,0 +1,3 @@
+[servers]
+node_droplet_8826349 ansible_ssh_host=162.243.116.141 ansible_ssh_user=root
+node_droplet_8826372 ansible_ssh_host=162.243.73.145 ansible_ssh_user=root
