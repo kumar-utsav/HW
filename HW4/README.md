@@ -31,21 +31,6 @@
 
 ![alt text](https://github.com/kumar-utsav/HW/blob/master/HW4/Task2%20(ambassador)/task2.gif "Task 1")
 
-3) **Docker Deploy**: Extend the deployment workshop to run a docker deployment process.
+#### Docker Deploy
 
-* A commit will build a new docker image.
-* Push to local registery.
-* Deploy the dockerized [simple node.js App](https://github.com/CSC-DevOps/App) to blue or green slice.
-* Add appropriate hook commands to pull from registery, stop, and restart containers.
-
-### Evaluation
-
-* File IO (20%)
-* Ambassador pattern (40%)
-* Docker Deploy (40%)
-
-### Submission
-
-[Submit a README.md](https://docs.google.com/a/ncsu.edu/forms/d/1oioay5bF5Le7PpuH1VAzxHCSNsOdkTvEqfrymHI1wjk/viewform?usp=send_form#start=invite) with a screencast (or .gif) for each component. Include code/scripts/configuration files in repo.
-
-Assignment is due, Monday, November 23rd midnight
+In this task, follow the steps from the Deployment workshop to setup everything.
