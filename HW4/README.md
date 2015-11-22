@@ -23,7 +23,7 @@
 
 2. Copy the ```docker-compose.yml``` file of the server folder to the server droplet. Do ```docker-compose up```. This will create two containers one for redis and another for redis-ambassador. 
 
-3. Now, copy the ```docker-compose.yml``` file of the client folder to the client droplet. Do ```docker-compose up```. This will create one container for redis-ambassador. This will connect to the redis server running on the server droplet.
+3. Now, copy the ```docker-compose.yml``` file of the client folder to the client droplet. Do ```docker-compose up```. This will create one container for redis-ambassador. This will connect to the redis server running on the server droplet. In this compose file, you need to pass in the ip address of the droplet running the container running the redis server.
 
 4. Now, run ```docker run -i -t --rm --link redis-ambassador:redis relateiq/redis-cli```. This will create a new container linked to the redis ambassador which will give you access to the redis-cli.
  
