@@ -35,7 +35,7 @@
 
 In this task, follow the steps from the Deployment workshop to setup everything. Just replace the post-receive hook provided in the respective blue and green folders.
 
-If you go to the address <host's ip address>:8080, you can see the node add running.
+If you go to the address <host ip address>:8080, you can see the node add running.
 
 ![alt text](https://github.com/kumar-utsav/HW/blob/master/HW4/Task3%20(deploy)/task3.gif "Task 3")
 
