@@ -1,0 +1,9 @@
+#!/bin/sh
+GIT_WORK_TREE=$ROOT/blue-www/ git checkout -f
+sudo docker build -t blue-image $ROOT/blue-www/
+sudo docker tag blue-image localhost:5000/blue:latest
+sudo docker push localhost:5000/blue:latest
+sudo docker pull localhost:5000/blue:latest
+sudo docker stop blue
+sudo docker rm blue
+sudo docker run -td --name blue -p 8080:8080 blue-image sh -c "node /src/main.js 8080"

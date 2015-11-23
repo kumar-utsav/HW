@@ -1,0 +1,9 @@
+#!/bin/sh
+GIT_WORK_TREE=$ROOT/green-www/ git checkout -f
+sudo docker build -t green-image $ROOT/green-www/
+sudo docker tag green-image localhost:5000/green:latest
+sudo docker push localhost:5000/green:latest
+sudo docker pull localhost:5000/green:latest  
+sudo docker stop green 
+sudo docker rm green
+sudo docker run -td --name green -p 8080:8080 green-image sh -c "node /src/main.js 8080" 
