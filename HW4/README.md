@@ -29,8 +29,12 @@
  
 5. In the redis-cli you can perform redis's set and get operations.
 
-![alt text](https://github.com/kumar-utsav/HW/blob/master/HW4/Task2%20(ambassador)/task2.gif "Task 1")
+![alt text](https://github.com/kumar-utsav/HW/blob/master/HW4/Task2%20(ambassador)/task2.gif "Task 2")
 
 #### Docker Deploy
 
-In this task, follow the steps from the Deployment workshop to setup everything.
+In this task, follow the steps from the Deployment workshop to setup everything. Just replace the post-receive hook provided in the respective blue and green folders.
+
+![alt text](https://github.com/kumar-utsav/HW/blob/master/HW4/Task3%20(deploy)/task3.gif "Task 3")
+
+
