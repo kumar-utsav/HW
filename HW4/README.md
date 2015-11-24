@@ -19,6 +19,8 @@
 
 #### Ambassador Pattern
 
+Based on the [docs](https://docs.docker.com/engine/articles/ambassador_pattern_linking/) provided by docker and follow the following steps:
+
 1. Create two different ubuntu based droplets (server and client) and install all the required tools (git, curl, docker, docker-compose, etc.).
 
 2. Copy the ```docker-compose.yml``` file of the server folder to the server droplet. Do ```docker-compose up```. This will create two containers one for redis and another for redis-ambassador. 
